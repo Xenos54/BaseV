@@ -4,10 +4,13 @@ class User
   
   attr_accessor :password, :password_confirmation
   
+  has_many :reports
+
   field :id, type: String
   
   field :name, type: String
   field :email, type: String
+  field :company, type: String
   
   field :salt, type: String
   field :fish, type: String

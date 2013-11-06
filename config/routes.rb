@@ -16,6 +16,8 @@ ToddyCat::Application.routes.draw do
   
   get 'privacy' => 'site#privacy'
   get 'terms'   => 'site#terms'
+
+  get 'report/:report_id' => 'report#show', as: :report
   
   root 'site#index'
 end
