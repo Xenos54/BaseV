@@ -1,0 +1,11 @@
+h1 
+	span Admin only: This page lists all reports and allows you to create new reports 
+	= link_to "New", reports_new_path
+table
+  - @reports.each do |r|
+    tr
+      td style="width: 60%" #{r.name}
+      td = r.user.email if r.user
+      td = link_to "Show", report_url(r)
+      td = link_to "Edit", edit_report_url(r)
+      td = link_to "Delete", report_url(r), method: :delete, confirm: "Are you sure?"

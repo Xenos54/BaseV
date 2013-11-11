@@ -1,14 +1,22 @@
 .row
   .col-lg-6.col-lg-offset-3
 
+    h3 User Profile
+    
+    div
+      div
+        = current_user.name
+      div
+        = current_user.email
+      
+        h3 Number of reports
+      div
+        = current_user.reports.length
+
+    h3 Reports
+
     ul
-      li
-        = @current_user.name
-      li
-        = @current_user.email
-      li
-        = @current_user.reports[0].name
-      li
-        = @current_user.reports[0].address
-      li
-        = @current_user.reports[0].cost
+      - current_user.reports.each do |report|
+        li
+          = link_to report.name, report_path(report)
+

@@ -4,9 +4,20 @@
       span.icon-bar
       span.icon-bar
       span.icon-bar
-    = link_to_unless_current "ToddyCat", root_url, class: "navbar-brand logo" do
-      span.navbar-brand.logo ToddyCat
+    = link_to_unless_current "Bugs", root_url, class: "navbar-brand logo" do
+      span.navbar-brand.logo Bugs
     .collapse.navbar-collapse
       ul.nav.navbar-nav.pull-right
         li
           = link_to "Sign out", logout_url, method: :delete, class: "logout-link"
+
+
+          
+      ul.nav.navbar-nav
+        li
+          = link_to "Pete's Profile Page", profile_url
+        - if current_user.email == "pete@me.com"
+          li
+            = link_to "Admin Reports", reports_url
+
+      

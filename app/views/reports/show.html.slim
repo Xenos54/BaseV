@@ -1,0 +1,24 @@
+h1  Your selected report ...
+
+= @report.name
+
+.row
+  .col-lg-6.col-lg-offset-3
+    table#users-table.table.table-bordered.table-striped
+      caption Report
+      thead
+        tr
+          th ReportName
+          th NameofSite
+          th AddressofSite
+          th SummaryResults
+          th Cost
+
+
+      tbody
+          tr
+            td = @report.name
+            td = @report.name_of_site
+            td = @report.address_of_site
+            td = @report.summary_results
+            td = @report.cost

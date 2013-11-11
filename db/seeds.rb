@@ -23,8 +23,8 @@ Registrant.create([
 users = User.create([
   {
     id: SecureRandom.urlsafe_base64,
-    name: "Chaz",
-    email: "chas@munat.com",
+    name: "Anne",
+    email: "anne@me.com",
     password: "123",
     password_confirmation: "123"
   },
@@ -41,29 +41,42 @@ users = User.create([
     email: "cad@munat.com",
     password: "123",
     password_confirmation: "123"
+  },
+  {
+    id: SecureRandom.urlsafe_base64,
+    name: "Pete",
+    email: "pete@me.com",
+    password: "123",
+    password_confirmation: "123"
   }
 ])
-
 
 Report.create([
   {
     id: SecureRandom.urlsafe_base64,
     name: "Report 1",
-    address: "123 Lane",
+    address_of_site: "123 Lane",
     cost: 100000,
     user: users[0]
   },
   {
     id: SecureRandom.urlsafe_base64,
+    name: "Report 2 for Anne",
+    address_of_site: "123 Hong Kong",
+    cost: 456,
+    user: users[0]
+  },
+  {
+    id: SecureRandom.urlsafe_base64,
     name: "Report 2",
-    address: "123 Lake View",
+    address_of_site: "123 Lake View",
     cost: 987349,
     user: users[1]
   },
   {
     id: SecureRandom.urlsafe_base64,
     name: "Report 3",
-    address: "123 Hollywood",
+    address_of_site: "123 Hollywood",
     cost: 19999000,
     user: users[2]
   }

@@ -1,0 +1,30 @@
+= form_for @report do |f|
+  p
+    = f.label :user_id
+    br
+    = f.select :user_id, User.all.map {|user| [user.email, user.id]}
+  p
+    = f.label :name
+    br
+    = f.text_field :name
+
+  p
+    = f.label :name_of_site
+    br
+    = f.text_field :name_of_site    
+
+  p
+    = f.label :address_of_site
+    br
+    = f.text_field :address_of_site
+  
+  p
+    = f.label :summary_results
+    br
+    = f.text_field :summary_results
+  p
+    = f.label :cost
+    br
+    = f.text_field :cost 
+  p
+    = f.submit

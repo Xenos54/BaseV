@@ -1,5 +1,6 @@
 /*
  *= require bootstrap
+ *= require layout
  */
 
 /* Sticky footer styles
@@ -8,14 +9,14 @@
 html,
 body {
   height: 100%;
-  background-color: #fff;
+  background-color:#efecca;
 }
 
 h1, caption {
   font-size: 160%;
   text-align: left;
   line-height: 200%;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #9999ff;
 }
 
 h2, legend {
@@ -44,7 +45,7 @@ h2, legend {
 #registrant-email {
   font-size: 1.4em;
   margin-top: 25px;
-  color: green;
+  color: red;
 }
 
 #pw-quality {
@@ -65,7 +66,7 @@ h2, legend {
 
 #match-div.pmatch {
   font-weight: bold;
-  color: green;
+  color: red;
 }
 
 /* Set the fixed height of the footer here */
@@ -93,5 +94,5 @@ h2, legend {
 }
 
 code {
-  font-size: 80%;
+  font-size:90%;
 }

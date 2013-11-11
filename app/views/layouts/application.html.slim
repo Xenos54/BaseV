@@ -11,6 +11,8 @@ html lang="en"
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
   body
+      
+
     #wrap
       - if current_user
         == render partial: 'layouts/navigation'
@@ -19,14 +21,21 @@ html lang="en"
     
       .container
         .page
+          - if flash[:notice]
+            .notice.success = flash[:notice]
+          - if flash[:error]
+            .notice.alert = flash[:error]            
           == yield
-          
+  #header
+  = image_tag("entom.jpg")
+    
+         
     #footer
       .container
         p.text-muted.credit
           => link_to "Privacy Policy", privacy_url
           ' •
           => link_to "Terms of Use", terms_url
-          ' • © 2013 ToddyCat
+          ' • © 2013 IOC
     
     == render partial: 'layouts/messages'
